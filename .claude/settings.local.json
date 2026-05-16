@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la '/Users/a1/Desktop/小丑/agents' '/Users/a1/Desktop/小丑/slash'; echo \"---\"; ls -la ~/.claude/)",
+      "Read(//Users/a1/.claude/**)"
+    ]
+  }
+}
