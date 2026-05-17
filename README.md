@@ -15,11 +15,11 @@
 | `src/components/` | UI 组件：PokerCard / GameHud / PlayZone / HandZone / ActionBar / ResultOverlay |
 | `src/App.vue` | 根组件 |
 | `legacy/index.html` | V1.0.0 原始单文件版本（存档，已被 Vue 版取代） |
-| `PRD.html` | 产品需求文档（课堂 5 分钟版） |
-| `DESIGN.html` | 设计规范（Design Tokens、页面结构、卡牌样式） |
-| `AI Coding 全流程实战.html` | 配套教学讲义 |
-| `agents/` | Claude Code 角色定义（产品 / 设计 / 全栈 / 测试） |
-| `slash/` | Claude Code 自定义 slash 命令 |
+| `docs/PRD.html` | 产品需求文档（课堂 5 分钟版） |
+| `docs/AI Coding 全流程实战.html` | 配套教学讲义 |
+| `design/DESIGN.html` | 设计规范（Design Tokens、页面结构、卡牌样式） |
+| `claude-kit/agents/` | Claude Code 角色定义（产品 / 设计 / 全栈 / 测试） |
+| `claude-kit/slash/` | Claude Code 自定义 slash 命令 |
 
 ## 安装步骤
 

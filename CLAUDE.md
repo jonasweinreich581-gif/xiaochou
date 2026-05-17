@@ -14,11 +14,11 @@
 - `src/App.vue` —— 根组件，组合各区域 + 计分飘字 + 初始化
 - `src/styles/global.css` —— 全局样式与 Design Tokens（CSS 变量）
 - `legacy/index.html` —— V1.0.0 原始单文件版本，仅存档对照，不再维护
-- `PRD.html` —— 产品需求文档，是功能范围的唯一权威来源（V1.0.0 范围以此为准）
-- `DESIGN.html` —— 设计规范，配色 / 字体 / 间距 / 卡牌样式以此为准
-- `AI Coding 全流程实战.html` —— 教学讲义，一般不改动
-- `agents/` —— Claude Code 子代理角色定义（product-manager / ui-designer / fullstack-engineer / qa-engineer）
-- `slash/` —— Claude Code 自定义 slash 命令源文件
+- `docs/PRD.html` —— 产品需求文档，是功能范围的唯一权威来源（V1.0.0 范围以此为准）
+- `docs/AI Coding 全流程实战.html` —— 教学讲义，一般不改动
+- `design/DESIGN.html` —— 设计规范，配色 / 字体 / 间距 / 卡牌样式以此为准
+- `claude-kit/agents/` —— Claude Code 子代理角色定义（product-manager / ui-designer / fullstack-engineer / qa-engineer）
+- `claude-kit/slash/` —— Claude Code 自定义 slash 命令源文件
 - `.claude/` —— 本地 Claude Code 配置
 
 ## 常用命令
@@ -32,7 +32,7 @@ npm run preview    # 预览构建产物
 
 ## 开发约定
 
-- 改游戏逻辑或样式前，先对照 `PRD.html` / `DESIGN.html`，不要偏离已定义的范围和视觉规范
+- 改游戏逻辑或样式前，先对照 `docs/PRD.html` / `design/DESIGN.html`，不要偏离已定义的范围和视觉规范
 - 数值规则（牌型基础分、倍数、点数）只在 `src/game/engine.js` 维护，严格按 PRD 表格，改动需同步文档
 - 纯逻辑放 `engine.js`（无框架依赖），响应式状态放 `useGame.js`，UI 只在组件里——保持这一分层，利于将来接 Tauri
 - 视觉迁移自原单文件版，组件样式用 `<style scoped>`，公共 token 走 `global.css` 的 CSS 变量
