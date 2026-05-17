@@ -4,11 +4,17 @@
 
 这是「AI 全流程开发」课程的教学项目——零基础学员通过亲手实现这款游戏，完整体验从 PRD → 设计 → 实现 → 验收的开发流程。
 
+技术栈：**Vue 3 + Vite**。架构为后续用 **Tauri** 打包跨端 App 做准备。
+
 ## 项目内容
 
 | 文件 / 目录 | 说明 |
 | --- | --- |
-| `index.html` | 游戏本体，单文件可直接运行 |
+| `src/game/engine.js` | 纯游戏引擎（牌堆 / 牌型识别 / 计分），无框架依赖 |
+| `src/composables/useGame.js` | 响应式状态管理 |
+| `src/components/` | UI 组件：PokerCard / GameHud / PlayZone / HandZone / ActionBar / ResultOverlay |
+| `src/App.vue` | 根组件 |
+| `legacy/index.html` | V1.0.0 原始单文件版本（存档，已被 Vue 版取代） |
 | `PRD.html` | 产品需求文档（课堂 5 分钟版） |
 | `DESIGN.html` | 设计规范（Design Tokens、页面结构、卡牌样式） |
 | `AI Coding 全流程实战.html` | 配套教学讲义 |
@@ -17,19 +23,20 @@
 
 ## 安装步骤
 
-无需安装、无构建步骤。克隆仓库即可：
+需要 Node.js（建议 LTS 版本）：
 
 ```bash
 git clone <repo-url>
 cd 小丑
+npm install
 ```
 
 ## 使用方式
 
-直接用浏览器打开 `index.html`：
-
 ```bash
-open index.html        # macOS
+npm run dev        # 本地开发，自动打开浏览器
+npm run build      # 构建到 dist/
+npm run preview    # 预览构建产物
 ```
 
 游戏规则：

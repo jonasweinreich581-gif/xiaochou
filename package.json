@@ -1,0 +1,19 @@
+{
+  "name": "xiaochou-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "小丑牌 Web —— Vue 3 实现，为后续 Tauri 跨端打包做准备",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}

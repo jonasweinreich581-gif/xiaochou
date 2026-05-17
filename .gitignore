@@ -9,9 +9,11 @@ Thumbs.db
 .env
 .env.*
 
-# 构建产物
+# 依赖与构建产物
+node_modules/
 build/
 dist/
+*.local
 
 # IDE / 编辑器临时文件
 .vscode/

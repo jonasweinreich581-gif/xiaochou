@@ -1,0 +1,102 @@
+:root {
+  --color-table: #2d5a3d;
+  --color-accent: #e8682a;
+  --color-discard: #a83232;
+  --color-gold: #d4a017;
+  --color-card-red: #d33f3f;
+  --color-card-black: #1a1a1a;
+  --color-card-bg: #fbfaf7;
+  --color-score: #5dd67a;
+  --radius-card: 12px;
+  --radius-btn: 999px;
+  --ease-card: 200ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #1a1a1a;
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 通用按钮 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 26px;
+  transition: transform 150ms ease, box-shadow 150ms ease, opacity 150ms ease;
+  letter-spacing: 0.3px;
+}
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.btn-play {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(232, 104, 42, 0.45);
+}
+.btn-play:hover:not(:disabled) {
+  box-shadow: 0 6px 18px rgba(232, 104, 42, 0.6);
+}
+.btn-discard {
+  background: var(--color-discard);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(168, 50, 50, 0.4);
+}
+.btn-discard:hover:not(:disabled) {
+  box-shadow: 0 6px 18px rgba(168, 50, 50, 0.55);
+}
+.btn-restart {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+.btn-restart:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+@media (max-width: 1120px) {
+  body {
+    padding: 0;
+  }
+  .game-viewport {
+    transform: scale(calc((100vw - 0px) / 1080));
+    transform-origin: center;
+  }
+}
